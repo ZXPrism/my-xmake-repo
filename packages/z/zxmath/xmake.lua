@@ -7,7 +7,5 @@ package("zxmath")
 
     on_install(function (package)
         import("package.tools.xmake").install(package)
-        add_includedirs("include")
-        os.mv("*.h", package:installdir("include/ZXMath"))
     end)
 package_end()

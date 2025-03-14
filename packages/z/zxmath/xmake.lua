@@ -3,6 +3,7 @@ package("zxmath")
     set_license("MIT")
 
     add_urls("https://github.com/ZXPrism/ZXMath.git")
+    add_versions("latest 26ffe9f")
 
     on_install(function (package)
         import("package.tools.xmake").install(package)

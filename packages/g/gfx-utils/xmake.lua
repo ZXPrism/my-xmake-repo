@@ -6,6 +6,6 @@ package("gfx-utils")
     -- add_versions("v1.0.0", "commit_or_tag_hash_here")
 
     on_install(function (package)
-        import("package.tools.xmake").install(package)
+        import("package.tools.xmake").install(package, {target = "gfx-utils-core"})
     end)
 package_end();

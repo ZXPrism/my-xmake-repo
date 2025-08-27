@@ -5,6 +5,9 @@ package("gfx-utils")
     add_urls("https://github.com/ZXPrism/gfx-utils.git")
     -- add_versions("v1.0.0", "commit_or_tag_hash_here")
 
+    add_deps("spdlog", "glm", "glad", "glfw", "stb")
+    add_deps("imgui", {configs = { glfw = true, opengl3 = true }})
+
     on_install(function (package)
         import("package.tools.xmake").install(package)
     end)
